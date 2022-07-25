@@ -1,0 +1,58 @@
+<mat-card>
+    <form  [formGroup]="createeventForm" (ngSubmit)="onSubmit()" >
+        <div class="container">
+            <mat-card-header>
+                <mat-card-title>Criar Evento</mat-card-title>
+            </mat-card-header>
+
+            <mat-form-field>
+                <input matInput placeholder="Tútulo" formControlName="title">
+
+            </mat-form-field>
+
+            <select placeholder="Esporte" formControlName="sport_id">
+             <option *ngFor="let sport of sports" [value]="sport.id">{{sport.name}}</option>
+
+            </select>
+
+            <mat-form-field>
+                <input matInput placeholder="Local" formControlName="location">
+
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput  type="date" placeholder="date" formControlName="date_of_the_event">
+
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput  placeholder="Mínimo de participantes" formControlName="minimum_number_of_participants" type="number">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput  placeholder="Máximo de participantes" formControlName="maximum_number_of_participants" type="number">
+            </mat-form-field>
+
+            <button mat-flat-button color="primary"  type="submit">Create</button>
+
+
+        </div>
+    </form>
+   
+</mat-card>
+
+<mat-card style="margin-top: 20px;">
+    <div class="container">
+            <div class="descricao">
+                <h4>Descrição Esporte- Dbpedia</h4>
+                <form  [formGroup]="createeventForm2">
+                    <select placeholder="Idioma" formControlName="idioma">
+                        <option >en</option>
+                        <option >pt</option>
+                    </select>
+                </form>
+                <p class="descri" style="margin-top: 20px;">{{this.descricaoesport}}</p>
+            </div>
+    </div>
+</mat-card>
+        

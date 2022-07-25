@@ -1,0 +1,18 @@
+<mat-sidenav-container class="sidenav-container" fullscreen>
+	<mat-sidenav #sidenav mode="side" opened="true">
+		<nav>
+			<ul>
+				<li ><a [routerLink]="['/events/myEvents']">Meus Eventos</a></li>
+				<li><a [routerLink]="['/events/showEvent']">Próximos Eventos</a></li>
+				<li><a [routerLink]="['/events/createEvent']">Criar Evento</a></li>
+        <li *ngIf="this.admin"><a [routerLink]="['/events/config']">Configurações</a></li>
+			</ul>
+		</nav>
+	</mat-sidenav>
+
+	<mat-sidenav-content>
+		<div class="main-content">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-sidenav-content>
+</mat-sidenav-container>
