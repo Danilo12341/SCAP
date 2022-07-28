@@ -1,23 +1,23 @@
 import { Router } from 'express'
-import {createMandatoController}  from '../controllers/MandatoController';
+import {MandatoController}  from '../controllers/MandatoController';
 
 
 
 export class MandatoRoute {
 
   public mandatoRouter: Router;
-  public createMandatoController: createMandatoController;
+  public MandatoController: MandatoController;
 
   constructor() {
     this.mandatoRouter = Router();
-    this.createMandatoController = new createMandatoController();
+    this.MandatoController = new MandatoController();
   }
 
   public routes() {
 
-     this.mandatoRouter.post('/', this.createMandatoController.create);
-     this.mandatoRouter.get('/', this.createMandatoController.GetAll);
-     this.mandatoRouter.get('/:id', this.createMandatoController.getById);
+     this.mandatoRouter.post('/', this.MandatoController.create);
+     this.mandatoRouter.get('/', this.MandatoController.GetAll);
+     this.mandatoRouter.get('/:id', this.MandatoController.getById);
   
     return this.mandatoRouter;
   }

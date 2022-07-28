@@ -2,7 +2,7 @@ import { Response,Request } from "express"
 import { CreateParentescoService } from "../services/Parentesco/CreateParentescoService";
 
 
-export class createParentescoController{
+export class ParentescoController{
     async create(request:Request,response:Response){
 
         const parentesco = request.body

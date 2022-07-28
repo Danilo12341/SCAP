@@ -4,7 +4,7 @@ import { GetAllAfastamentoService } from "../services/Afastamento/GetAllAfastame
 import { GetByIdMandatoService } from "../services/Afastamento/GetByIdAfastamentoService";
 
 
-export class createAfastamentoController{
+export class AfastamentoController{
     async create(request:Request,response:Response){
 
         const afastamento = request.body

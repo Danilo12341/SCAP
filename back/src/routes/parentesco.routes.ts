@@ -1,21 +1,21 @@
 import { Router } from 'express'
-import { createParentescoController } from '../controllers/ParentescoController';
+import { ParentescoController } from '../controllers/ParentescoController';
 
 
 
 export class ParentescoRoute {
 
   public parentescoRouter: Router;
-  public createParentescoController: createParentescoController;
+  public ParentescoController: ParentescoController;
 
   constructor() {
     this.parentescoRouter = Router();
-    this.createParentescoController = new createParentescoController();
+    this.ParentescoController = new ParentescoController();
   }
 
   public routes() {
 
-     this.parentescoRouter.post('/', this.createParentescoController.create);
+     this.parentescoRouter.post('/', this.ParentescoController.create);
      //this.parentescoRouter.get('/', this.createParentescoController.GetAll);
      //this.parentescoRouter.get('/:id',this.createParentescoController.getById);
   

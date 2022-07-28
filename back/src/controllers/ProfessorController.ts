@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { FindAllStudentsPagedService } from "../services/Student/FindAllStudentsPagedService";
-import { DeleteStudentService } from '../services/Student/DeleteStudentService';
+import { FindAllStudentsPagedService } from "../services/Professor/FindAllStudentsPagedService";
+import { DeleteStudentService } from '../services/Professor/DeleteStudentService';
 
 export class StudentController{
     async findAll(request: Request, response: Response) {

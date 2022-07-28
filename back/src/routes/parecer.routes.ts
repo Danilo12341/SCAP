@@ -1,23 +1,23 @@
 import { Router } from 'express'
-import { createParecerController } from '../controllers/ParecerControl';
+import { ParecerController } from '../controllers/ParecerControl';
 
 
 
 export class parecerRoute {
 
   public parecerRouter: Router;
-  public createParecerController: createParecerController;
+  public ParecerController: ParecerController;
 
   constructor() {
     this.parecerRouter = Router();
-    this.createParecerController = new createParecerController();
+    this.ParecerController = new ParecerController();
   }
 
   public routes() {
 
-     this.parecerRouter.post('/', this.createParecerController.create);
-     this.parecerRouter.get('/', this.createParecerController.GetAll);
-     this.parecerRouter.get('/:id',this.createParecerController.getById);
+     this.parecerRouter.post('/', this.ParecerController.create);
+     this.parecerRouter.get('/', this.ParecerController.GetAll);
+     this.parecerRouter.get('/:id',this.ParecerController.getById);
   
     return this.parecerRouter;
   }

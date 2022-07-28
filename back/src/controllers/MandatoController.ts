@@ -6,7 +6,7 @@ import {GetByIdMandatoService}  from "../services/Mandato/GetByIdMandatoService"
 
 
 
-export class createMandatoController{
+export class MandatoController{
     async create(request:Request,response:Response){
 
         const mandato  = request.body
