@@ -7,7 +7,7 @@ export class Afastamento{
     @PrimaryGeneratedColumn()
     id:number;
 
-    @Column('varchar')
+    @Column()
     nome_evento: string;
 
     @CreateDateColumn()
@@ -23,16 +23,16 @@ export class Afastamento{
     data_fim_evento: Date;
 
     @Column()
-    situacao:number;
+    situacao: number;
 
     @Column()
-    tipo:number;
+    tipoAfastamento: number;
 
     @Column()
-    onus:number;
+    onus: number;
     
-    @Column('varchar')
-    motivo:string;
+    @Column()
+    motivo: string;
 
     @Column()
     id_professor:number;
@@ -40,5 +40,6 @@ export class Afastamento{
     @ManyToOne(() => User)
     @JoinColumn({ name: "id_professor" })
     user: User;
+
 
 }

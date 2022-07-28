@@ -16,8 +16,8 @@ export class AfastamentoRoute {
   public routes() {
 
      this.afastamentoRouter.post('/', this.createAfastamentoController.create);
-     //this.afastamentoRouter.get('/', this.createAfastamentoController.GetAll);
-     //this.afastamentoRouter.get('/:id',this.createAfastamentoController.getById);
+     this.afastamentoRouter.get('/', this.createAfastamentoController.GetAll);
+     this.afastamentoRouter.get('/:id',this.createAfastamentoController.getById);
   
     return this.afastamentoRouter;
   }

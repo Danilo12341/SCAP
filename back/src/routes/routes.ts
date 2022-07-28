@@ -8,12 +8,15 @@ import mandatoRoutes from "./mandato.routes";
 import rdfRoute from './rdf.routes';
 import parentescoRoutes from "./parentesco.routes";
 import afastamentoRoutes from "./afastamento.routes";
+import  parecerRoute  from "./parecer.routes";
 import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
+
 
 const routes = Router();
 
 routes.use("/mandatos",ensureAuthenticated, mandatoRoutes);
-routes.use("/afastamento", afastamentoRoutes);
+routes.use("/pareceres", parecerRoute);
+routes.use("/afastamentos", afastamentoRoutes);
 routes.use("/parentescos", parentescoRoutes);
 routes.use("/users", userRoute);
 routes.use("/students",ensureAuthenticated, studentRoute);

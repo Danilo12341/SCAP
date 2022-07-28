@@ -1,5 +1,7 @@
 import { Response,Request } from "express"
 import { CreateAfastamentoService } from "../services/Afastamento/CreateAfastamentoService";
+import { GetAllAfastamentoService } from "../services/Afastamento/GetAllAfastamentoService";
+import { GetByIdMandatoService } from "../services/Afastamento/GetByIdAfastamentoService";
 
 
 export class createAfastamentoController{
@@ -21,29 +23,29 @@ export class createAfastamentoController{
 
     }
 
-    /*
+    
     async GetAll(request:Request,response:Response){
-        const service = new  GetAllMandatoService;
+        const service = new  GetAllAfastamentoService();
         const result = await service.execute();
 
         return response.json(result);
 
     }
+    
     async getById(request: Request, response: Response) {
 
             const {id} = request.params;
 
-            const getMandatoByIdService = new GetByIdMandatoService();
-            const mandato = await getMandatoByIdService.execute(+id
+            const getAfastamentoByIdService = new GetByIdMandatoService();
+            const afastamento = await getAfastamentoByIdService.execute(
+               +id
             );
-
-            
-            return response.json(mandato);
+            return response.json(afastamento);
              
             
             
     }
-    */
+    
     
 
 }

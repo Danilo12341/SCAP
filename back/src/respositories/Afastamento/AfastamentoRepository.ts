@@ -18,4 +18,25 @@ export class AfastamentoRespository implements IAfastamentoRespository{
         return afastamentotoSaved;
     }
 
+    public async  getAll(): Promise<Afastamento[]> {
+
+        return await this.repo.find({
+            relations:['user']
+        });
+      }
+
+    public  async getById(idprofessor: number): Promise<Afastamento[]>{
+
+        var valor : number = idprofessor;
+        console.log(valor + "aquii")
+        const afastamento  =  await getRepository(Afastamento)
+        .createQueryBuilder("afastamento")
+        .where('afastamento.id_professor = :id_professor ', { id_professor:valor })
+        .getMany();
+
+        console.log(afastamento)
+        return afastamento 
+
+    }
+
 }
