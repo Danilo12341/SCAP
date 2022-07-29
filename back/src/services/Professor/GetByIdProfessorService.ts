@@ -6,7 +6,7 @@ interface Props {
     limit?: number,
 }
 
-export class FindAllStudentsPagedService {
+export class GetByIdProfessorService {
     async execute({ page, limit }: Props): Promise<[Student[], undefined | number ]> {
         const repo = getRepository(Student);
 

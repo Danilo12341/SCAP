@@ -4,7 +4,7 @@ import { Student } from '../../database/entities/Professor';
 import { User } from "../../database/entities/Pessoa";
 import AppError from '../../shared/errors/AppError';
 
-export class CreateUserService {
+export class CreatePessoaService {
     async execute(student: Student): Promise<Student> {
         const repo = getRepository(Student);
         const repoUser = getRepository(User);

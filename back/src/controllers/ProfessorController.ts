@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { FindAllStudentsPagedService } from "../services/Professor/FindAllStudentsPagedService";
-import { DeleteStudentService } from '../services/Professor/DeleteStudentService';
+import { GetByIdProfessorService} from "../services/Professor/GetByIdProfessorService";
+import { DeletePessoaService } from '../services/Professor/DeleteStudentService';
 
-export class StudentController{
+export class ProfessorController{
     async findAll(request: Request, response: Response) {
         try {
             const { page, limit } = request.query;
@@ -10,7 +10,7 @@ export class StudentController{
             const getPage = page || 1;
             const getLimit = limit || 10;
 
-            const findAllStudentsService = new FindAllStudentsPagedService();
+            const findAllStudentsService = new GetByIdProfessorService();
             const students = await findAllStudentsService.execute({
                 page: +getPage,
                 limit: +getLimit
@@ -26,7 +26,7 @@ export class StudentController{
         try {
             const { id } = request.params;
 
-            const deleteStudentService = new DeleteStudentService();
+            const deleteStudentService = new DeletePessoaService();
             await deleteStudentService.execute(+id);
 
             return response.status(200).send();

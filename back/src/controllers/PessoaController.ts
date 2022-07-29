@@ -1,14 +1,14 @@
 import { Request, Response } from "express";
-import { CreateUserService } from "../services/Pessoa/CreateUserService";
+import { CreatePessoaService } from "../services/Pessoa/CreateUserService";
 import { LoginService } from "../services/Pessoa/LoginService";
 
 
-export class UserController{
+export class PessoaController{
     async create(request: Request, response: Response) {
         try {
             const student = request.body;        
 
-            const createUserService = new CreateUserService();
+            const createUserService = new CreatePessoaService();
             const studentSaved = await createUserService.execute(student);
 
             return response.status(201).json(studentSaved);            

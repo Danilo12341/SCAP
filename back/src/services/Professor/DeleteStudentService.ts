@@ -2,7 +2,7 @@ import { getRepository } from "typeorm";
 import { Student } from "../../database/entities/Professor";
 import AppError from '../../shared/errors/AppError';
 
-export class DeleteStudentService {
+export class DeletePessoaService {
     async execute(id: number): Promise<void> {
         const repo = getRepository(Student);
 
