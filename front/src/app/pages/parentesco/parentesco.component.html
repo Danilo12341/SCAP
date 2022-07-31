@@ -1,0 +1,31 @@
+
+<mat-card>
+    <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <mat-card-header>
+                <mat-card-title>Cadastrar Parentesco</mat-card-title>
+            </mat-card-header>
+
+            Tipo Parentesco
+            <select placeholder="Chefe" formControlName="tipo">
+                <option  value="1">Sanguineo</option>
+                <option  value="2">Matrimonial</option>
+            </select>
+
+            Professor 1
+            <select placeholder="Professor"  formControlName="id_professor1" >
+            <option *ngFor="let professor of  professores" [value]="professor.id">{{professor.user.name}}</option>
+
+            </select>
+
+            Professor 2
+            <select placeholder="Professor"  formControlName="id_professor2" >
+                <option *ngFor="let professor of  professores" [value]="professor.id">{{professor.user.name}}</option>
+            </select>
+
+            <button mat-flat-button color="primary" type="submit">Cadastrar</button>
+        </div>
+    </form>
+</mat-card>
+
+

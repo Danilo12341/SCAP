@@ -18,8 +18,6 @@ export class EventRepository implements IEventRespository{
         
         return await this.repo.createQueryBuilder("events")
                             .innerJoinAndSelect('events.sport', 'sports')
-                            .where('events.date_of_the_event >= :dateOfTheEvent', { dateOfTheEvent: new Date() })
-                            .orderBy('events.dateOfTheEvent', 'ASC')
                             .limit(limit)
                             .offset(offset)
                             .getManyAndCount();
@@ -30,8 +28,6 @@ export class EventRepository implements IEventRespository{
         
         return await this.repo.createQueryBuilder("events")
                             .innerJoinAndSelect('events.sport', 'sports')
-                            .where('events.date_of_the_event >= :dateOfTheEvent AND events.sport_id = :sport_id', { dateOfTheEvent: new Date(), sport_id: sport })
-                            .orderBy('events.dateOfTheEvent', 'ASC')
                             .limit(limit)
                             .offset(offset)
                             .getManyAndCount();

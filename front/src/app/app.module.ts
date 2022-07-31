@@ -30,6 +30,14 @@ import { ConfigComponent } from './pages/config/config.component';
 import { StudentComponent } from './pages/config/student/student.component';
 import { SportComponent } from './pages/config/sport/sport.component';
 import { CategoryComponent } from './pages/category/category.component';
+import { ShowhomeComponent } from './pages/showhome/showhome.component';
+import { SecretarioComponent } from './pages/secretario/secretario.component';
+import { ProfessorComponent } from './pages/professor/professor.component';
+import { MandatoComponent } from './pages/mandato/mandato.component';
+import { ParecerComponent } from './pages/parecer/parecer.component';
+import { ParentescoComponent } from './pages/parentesco/parentesco.component';
+import { AfastamentoComponent } from './pages/afastamento/afastamento.component';
+import { DocumentoComponent } from './pages/documento/documento.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +54,15 @@ import { CategoryComponent } from './pages/category/category.component';
     ConfigComponent,
     StudentComponent,
     SportComponent,
-    CategoryComponent
+    CategoryComponent,
+    ShowhomeComponent,
+    SecretarioComponent,
+    ProfessorComponent,
+    MandatoComponent,
+    ParecerComponent,
+    ParentescoComponent,
+    AfastamentoComponent,
+    DocumentoComponent
   ],
   imports: [
     BrowserModule,

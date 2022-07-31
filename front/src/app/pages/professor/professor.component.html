@@ -1,0 +1,37 @@
+
+<mat-card>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <mat-card-header>
+                <mat-card-title>Cadastrar Professor</mat-card-title>
+            </mat-card-header>
+
+            <mat-form-field>
+                <input matInput placeholder="Nome" formControlName="name">
+                <mat-hint *ngIf="registerForm?.get('name')?.errors?.required && registerForm?.get('name')?.touched">Nome é obrigatório.</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="E-mail" formControlName="email">
+                <mat-hint *ngIf="registerForm?.get('email')?.errors?.required && registerForm?.get('email')?.touched">E-mail é obrigatório</mat-hint>
+            </mat-form-field>
+
+
+          <mat-form-field>
+            <input matInput placeholder="Telefone" formControlName="telephone">
+        </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="password" placeholder="Senha" formControlName="password">
+                <mat-hint *ngIf="registerForm?.get('password')?.errors?.required && registerForm?.get('password')?.touched">Senha obrigatória</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="password" placeholder="Confirme a senha" formControlName="confirmPassword">
+                <mat-hint *ngIf="registerForm.hasError('passwordsNotMatching') && registerForm?.get('password')?.touched">Senhas diferentes!</mat-hint>
+            </mat-form-field>
+
+            <button mat-flat-button color="primary" type="submit">Cadastrar</button>
+        </div>
+    </form>
+</mat-card>

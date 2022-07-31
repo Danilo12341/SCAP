@@ -1,0 +1,61 @@
+
+<mat-card>
+    <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <mat-card-header>
+                <mat-card-title>Cadastrar Afastamento</mat-card-title>
+            </mat-card-header>
+
+            <mat-form-field>
+                <input matInput placeholder="Nome do Evento" formControlName="nome_evento">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput   type="date" placeholder="Data de Inicio Afastamento " formControlName="data_inicio_afastamento">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput  type="date" placeholder="Data Final de Afastamento" formControlName="data_final_afastamento">
+
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput   type="date" placeholder="Data de Inicio Evento " formControlName="data_inicio_evento">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput  type="date" placeholder="Data Final de evento" formControlName="data_fim_evento">
+            </mat-form-field>
+
+            Situação
+            <select placeholder="Chefe" formControlName="chefe"  formControlName="situacao">
+                <option  value="1">Iniciado</option>
+                <option  value="2">Liberado</option>
+                <option  value="3">AprovadoDI</option>
+                <option  value="4">AprovadoCT</option>
+                <option  value="5">AprovadoPRPPG</option>
+                <option  value="6">Cancelado</option>
+                <option  value="7">Reprovado</option>
+                <option  value="7">Arquivado</option>
+            </select>
+           Tipo Afastamento
+            <select placeholder="Chefe" formControlName="chefe" formControlName="tipoAfastamento">
+                <option  value="1">Nacional</option>
+                <option  value="2">Internacional</option>
+            </select>
+            Onus
+            <select placeholder="Chefe" formControlName="chefe" formControlName="onus">
+                <option  value="1">Total</option>
+                <option  value="2">Parcial</option>
+                <option  value="3">Inexistente</option>
+            </select>
+
+            <mat-form-field>
+                <input matInput placeholder="Motivo" formControlName="motivo">
+            </mat-form-field>
+
+            <button mat-flat-button color="primary" type="submit">Cadastrar</button>
+        </div>
+    </form>
+</mat-card>
+
+

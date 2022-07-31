@@ -15,5 +15,12 @@ export class MandatoService{
       return this.http.get<any>(`${this.baseUrl}/${studentId}`).toPromise();
     }
 
+
+    createMandato(mandato:any) {
+      return this.http.post<any>(`${this.baseUrl}`,mandato).toPromise();
+    }
+
+
+
    
 }

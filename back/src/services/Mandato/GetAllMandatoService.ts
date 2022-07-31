@@ -7,19 +7,6 @@ export class GetAllMandatoService{
 
 
 
-
-   
-    async execute2(){
-
-        const repo = getRepository(Mandato);
-
-        const mandato = await repo.find({
-            relations:['user']
-        });
-        return mandato;
-
-    }
-
     async execute(): Promise<Mandato[]> {
 
         const mandatoRespository = new MandatoRespository();

@@ -21,6 +21,18 @@ export class ProfessorController{
             return response.status(error.statusCode || 500).json({ message: error.message, title: error.title });
         }        
     }
+    async findAllprofessor(request: Request, response: Response) {
+        try {
+         
+
+            const findAllStudentsService = new GetByIdProfessorService();
+            const students = await findAllStudentsService.execute2()
+
+            return response.status(200).json(students);
+        } catch (error) {
+            return response.status(error.statusCode || 500).json({ message: error.message, title: error.title });
+        }        
+    }
 
     public async delete(request: Request, response: Response) {
         try {
@@ -33,5 +45,20 @@ export class ProfessorController{
         } catch (err) {
             return response.status(err.statusCode || 500).json({ message: err.message, title: err.title });
         }
+    }
+    async findAllId(request: Request, response: Response) {
+        try {
+            
+            const { id } = request.params;
+          
+
+            const findAllStudentsService = new GetByIdProfessorService();
+            const students = await findAllStudentsService.execute3(+id)
+              
+
+            return response.status(200).json(students);
+        } catch (error) {
+            return response.status(error.statusCode || 500).json({ message: error.message, title: error.title });
+        }        
     }
 }

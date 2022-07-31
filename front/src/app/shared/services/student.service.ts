@@ -11,10 +11,13 @@ export class StudentService {
 
   constructor(private http: HttpClient) { }
 
-  private baseUrl = `${environment.URL_UFES_SPORT_BACK}/students`;
+  private baseUrl = `${environment.URL_UFES_SPORT_BACK}/students/all`;
 
   findAll(page: number, limit: number) : Promise<any>{
     return this.http.get<any>(`${this.baseUrl}?page=${page}&limit=9999`).toPromise();
+  }
+  findAllId(id: number) : Promise<any>{
+    return this.http.get<any>(`${this.baseUrl}/${id}`).toPromise();
   }
 
   delete(id: number): Promise<any> {

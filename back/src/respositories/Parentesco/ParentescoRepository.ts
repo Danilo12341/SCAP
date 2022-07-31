@@ -20,6 +20,11 @@ export class ParentescoRespository implements IParentescoRespository{
 
         return parentescotoSaved;
     }
+    public async getAll(): Promise<Parentesco[]> {
+        return await this.repo.find({
+            relations:['user']
+        });   
+    }
 
   
 }

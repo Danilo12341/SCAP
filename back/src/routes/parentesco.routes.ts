@@ -16,7 +16,7 @@ export class ParentescoRoute {
   public routes() {
 
      this.parentescoRouter.post('/', this.ParentescoController.create);
-     //this.parentescoRouter.get('/', this.createParentescoController.GetAll);
+     this.parentescoRouter.get('/', this.ParentescoController.GetAll);
      //this.parentescoRouter.get('/:id',this.createParentescoController.getById);
   
     return this.parentescoRouter;

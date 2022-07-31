@@ -11,14 +11,12 @@ import { CookieService } from 'ngx-cookie-service';
 export class HeaderComponent implements OnInit {
 
   admin: boolean = false;
-  email: boolean = false;
 
 
   constructor(private cookieService: CookieService) { }
 
   ngOnInit(): void {
     this.admin = this.stringToBoolean(this.cookieService.get('admin'));
-    this.email = this.stringToBoolean(this.cookieService.get('email'));
   }
 
   thankYou(){
@@ -33,7 +31,11 @@ export class HeaderComponent implements OnInit {
     if(string ==='true'){
       return true;
     }
+    if(string ==='false'){
+      return true;
+    }
     return false;
   }
+ 
 
 }

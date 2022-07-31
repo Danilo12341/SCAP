@@ -13,7 +13,10 @@ export class professorRoute {
 
   public routes() {
     this.ProfessorRouter.get('/', this.professorController.findAll);
+    this.ProfessorRouter.get('/all', this.professorController.findAllprofessor);
+    this.ProfessorRouter.get('/all/:id', this.professorController.findAllId);
     this.ProfessorRouter.delete('/:id', this.professorController.delete);
+
 
     return this.ProfessorRouter;
   }

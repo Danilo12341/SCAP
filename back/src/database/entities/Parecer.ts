@@ -19,6 +19,9 @@ export class Parecer{
     @Column()
     id_afastamento: number;
 
+    @Column()
+    julgamento: number;
+
     @ManyToOne(() => User)
     @JoinColumn({ name: "id_professor" })
     user: User;

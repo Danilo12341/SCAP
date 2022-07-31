@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
     try {
       const responseLogin = await this.authService.login(login);
       this.preencheCookies(responseLogin);
-      this.router.navigate(['events']);
+      this.router.navigate(['home/showhome']);
     } catch (error) {
       console.log(error);
       alert(error.error.title + error.error.message);

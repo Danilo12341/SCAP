@@ -17,4 +17,5 @@ export class CreateParentescoService{
         return parentescoSaved;
     }
     
+    
 }

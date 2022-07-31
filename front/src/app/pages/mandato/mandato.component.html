@@ -1,0 +1,35 @@
+
+<mat-card>
+    <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <mat-card-header>
+                <mat-card-title>Cadastrar Mandato</mat-card-title>
+            </mat-card-header>
+
+            <select placeholder="Professor"  formControlName="professor_id" >
+            <option *ngFor="let professor of  professores" [value]="professor.id">{{professor.user.name}}</option>
+
+            </select>
+
+            <mat-form-field>
+                <input matInput   type="date" placeholder="Data de Inicio" formControlName="data_inicio">
+
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput  type="date" placeholder="Data Final" formControlName="data_final">
+
+            </mat-form-field>
+
+            Chefe do Departamento
+            <select placeholder="Chefe" formControlName="chefe">
+                <option  value="1">FALSE</option>
+                <option  value="2">TRUE</option>
+            </select>
+
+            <button mat-flat-button color="primary" type="submit">Cadastrar</button>
+        </div>
+    </form>
+</mat-card>
+
+

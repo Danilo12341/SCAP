@@ -1,0 +1,32 @@
+
+<mat-card>
+    <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <mat-card-header>
+                <mat-card-title>Anexo Documento</mat-card-title>
+            </mat-card-header>
+
+            <mat-form-field>
+                <input matInput   type="date" placeholder="Data Parecer" formControlName="data_documento">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Titulo" formControlName="titulo">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Nome Documento" formControlName="nome_documento">
+            </mat-form-field>
+
+            Afastamento
+            <select placeholder="Afastamento"  formControlName="id_afastamento">
+                <option *ngFor="let afastamento of  afastamentos" [value]="afastamento.id">
+                    {{afastamento.nome_evento}} </option>
+            </select>
+            <button mat-flat-button color="primary" type="submit">Cadastrar</button>
+        </div>
+    </form>
+</mat-card>
+
+
+

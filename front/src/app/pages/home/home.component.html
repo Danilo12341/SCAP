@@ -1,34 +1,21 @@
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>UFESports</mat-card-title>
-    </mat-card-header>
+<mat-sidenav-container class="sidenav-container" fullscreen>
+	<mat-sidenav-content>
+		<div class="main-content">   
+			<router-outlet> 
+            </router-outlet>
+		</div>
+       
+        <div class="botao">
+            <a    [routerLink]="['/home/showhome']">  <button>Home</button></a>     
+            <a  *ngIf="this.admin" [routerLink]="['/home/professor']">  <button>Cadastro Professor</button></a>
+            <a  *ngIf="this.admin" [routerLink]="['/home/secretario']">  <button> Cadastro  Secretário</button></a>
+            <a  *ngIf="this.admin" [routerLink]="['/home/mandato']">  <button> Cadastro Mandato</button></a>
+            <a  *ngIf="!this.admin" [routerLink]="['/home/afastamento']">  <button> Criar Afastamento</button></a>
+            <a  *ngIf="this.admin" [routerLink]="['/home/parentesco']">  <button> Cadastro Parentesco</button></a>
+            <a  *ngIf="!this.admin" [routerLink]="['/home/parecer']">  <button> Deferir Parecer</button></a>
+            <a  *ngIf="!this.admin" [routerLink]="['/home/documento']">  <button> Anexo Documento</button></a>   
+        </div>
+	</mat-sidenav-content>
+</mat-sidenav-container>
 
-    <mat-card-content>
-        <p>
-            UFESports Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Voluptatibus repellendus inventore velit laudantium itaque recusandae ducimus corporis ullam eum error? 
-            Mollitia, unde. Laudantium doloribus minima quibusdam, iusto qui recusandae harum!
-        </p>
-        <p>
-            UFESports Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Voluptatibus repellendus inventore velit laudantium itaque recusandae ducimus corporis ullam eum error? 
-            Mollitia, unde. Laudantium doloribus minima quibusdam, iusto qui recusandae harum!
-        </p>
-        <p>
-            UFESports Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Voluptatibus repellendus inventore velit laudantium itaque recusandae ducimus corporis ullam eum error? 
-            Mollitia, unde. Laudantium doloribus minima quibusdam, iusto qui recusandae harum!
-        </p>
-        <p>
-            UFESports Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Voluptatibus repellendus inventore velit laudantium itaque recusandae ducimus corporis ullam eum error? 
-            Mollitia, unde. Laudantium doloribus minima quibusdam, iusto qui recusandae harum!
-        </p>
-        <p>
-            UFESports Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Voluptatibus repellendus inventore velit laudantium itaque recusandae ducimus corporis ullam eum error? 
-            Mollitia, unde. Laudantium doloribus minima quibusdam, iusto qui recusandae harum!
-        </p>
-    </mat-card-content>
-
-</mat-card>
+   
