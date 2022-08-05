@@ -81,7 +81,6 @@ export class AfastamentoComponent implements OnInit {
   async listProfessor() {
     const professores = await this.studentService.findAll(1,10);
     this.professores = professores;
-    console.log(this.professores);
     
   }
  

@@ -38,5 +38,34 @@ export class AfastamentoRespository implements IAfastamentoRespository{
         return afastamento 
 
     }
+    public async getOneById(idafastamento): Promise<Afastamento> {
+
+        const repo = getRepository(Afastamento);
+
+         const afastamento = await repo.createQueryBuilder("afastamento")
+        .where('afastamento.id = :id', { id: idafastamento })
+        .getOne()
+
+        return afastamento;
+    }
+
+    public async updateAfastamento(id: number, situacao: number): Promise<Afastamento | Error> {
+        const repo = getRepository(Afastamento);
+
+        const afastamento = await repo.findOne(id);
+
+        if(!afastamento) {
+            return new Error("Error! Não foi possível apagar!");
+        }
+
+        afastamento.situacao = situacao ? situacao : afastamento.situacao;
+
+        await repo.save(afastamento);
+
+        return afastamento
+
+    }
+
+      
 
 }

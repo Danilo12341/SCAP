@@ -18,9 +18,17 @@ export class ShowhomeComponent implements OnInit {
   e_mail: string;
   nome: string;
   professor:any
+  professorId: number;
+  professores:any;
+  telefone:string;
+  name2:string;
+
+  
 
 
   ngOnInit(): void {
+    this.professorId = parseFloat(this.cookieService.get('studentId'));
+    this.listProfessor();
     this.alguem = this.alguemvalor(this.cookieService.get('admin'))
     this.admin = this.stringToBoolean(this.cookieService.get('admin'));
     this.email = this.stringToBoolean(this.cookieService.get('email'));
@@ -28,6 +36,13 @@ export class ShowhomeComponent implements OnInit {
     this.nome = this.cookieService.get('nome')
   }
 
+  async listProfessor() {
+    const professores = await this.studentService.findAllId(this.professorId);
+    this.professores = professores;
+    this.telefone = professores.telephone;
+    this.name2 =professores.user.name;
+     
+  }
  
  
   alguemvalor(string){

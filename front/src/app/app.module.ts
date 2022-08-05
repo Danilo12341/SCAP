@@ -38,6 +38,9 @@ import { ParecerComponent } from './pages/parecer/parecer.component';
 import { ParentescoComponent } from './pages/parentesco/parentesco.component';
 import { AfastamentoComponent } from './pages/afastamento/afastamento.component';
 import { DocumentoComponent } from './pages/documento/documento.component';
+import { ListafastamentoComponent } from './pages/listafastamento/listafastamento.component';
+import { VerafastamentoComponent } from './pages/verafastamento/verafastamento.component';
+
 
 @NgModule({
   declarations: [
@@ -62,7 +65,9 @@ import { DocumentoComponent } from './pages/documento/documento.component';
     ParecerComponent,
     ParentescoComponent,
     AfastamentoComponent,
-    DocumentoComponent
+    DocumentoComponent,
+    ListafastamentoComponent,
+    VerafastamentoComponent,
   ],
   imports: [
     BrowserModule,

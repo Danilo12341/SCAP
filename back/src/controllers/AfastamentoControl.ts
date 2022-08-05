@@ -2,6 +2,7 @@ import { Response,Request } from "express"
 import { CreateAfastamentoService } from "../services/Afastamento/CreateAfastamentoService";
 import { GetAllAfastamentoService } from "../services/Afastamento/GetAllAfastamentoService";
 import { GetByIdMandatoService } from "../services/Afastamento/GetByIdAfastamentoService";
+import { UpdateAfastamentoService } from "../services/Afastamento/UpdateAfastamentoService";
 
 
 export class AfastamentoController{
@@ -45,6 +46,28 @@ export class AfastamentoController{
             
             
     }
+
+    async onegetById(request: Request, response: Response) {
+
+        const {id} = request.params;
+
+        const getAfastamentoByIdService = new GetByIdMandatoService();
+        const afastamento = await getAfastamentoByIdService.execute2(
+           +id
+        );
+        return response.json(afastamento);            
+    }
+
+    async updateAfastamento(request: Request, response: Response) {
+
+        const {id} = request.params;
+        const {situacao} = request.body;
+
+        const updateAfastamentoService = new UpdateAfastamentoService()
+        const afastamento = await updateAfastamentoService.execute(+id,situacao)
+        return response.json(afastamento);            
+    }
+    
     
     
 

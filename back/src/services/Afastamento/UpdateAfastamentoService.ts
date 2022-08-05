@@ -1,15 +1,14 @@
 import { AfastamentoRespository } from "../../respositories/Afastamento/AfastamentoRepository";
 import {Afastamento} from "../../database/entities/Afastamento"
 
-
-export class CreateAfastamentoService{
+export class UpdateAfastamentoService{
   
 
-    async execute(afastamento: Afastamento): Promise<Afastamento> {
+    async execute(id: number, situacao: number): Promise<Afastamento | Error>  {
 
         const afastamentoRespository = new AfastamentoRespository();
 
-        const afastamentoSaved = await  afastamentoRespository.create(afastamento);
+        const afastamentoSaved = await  afastamentoRespository.updateAfastamento(id,situacao);
 
         return afastamentoSaved;
     }

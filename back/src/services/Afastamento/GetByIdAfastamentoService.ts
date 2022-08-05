@@ -11,5 +11,13 @@ export class GetByIdMandatoService{
     
          return afastamento;
     }
+
+    async execute2(idafastamento: number): Promise<Afastamento> {
+
+        const afastamentoRespository = new AfastamentoRespository;
+        const afastamento = await afastamentoRespository.getOneById(idafastamento);
+       
+        return afastamento;
+    }
   
 }

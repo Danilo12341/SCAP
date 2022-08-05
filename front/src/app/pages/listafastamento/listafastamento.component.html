@@ -1,0 +1,20 @@
+<div id="students" class="container">
+    <h2>Lista de Afastamentos</h2>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>data inicio</th>
+        <th>data final</th>
+        <th> situacao </th>
+        <th> ver mais </th>
+      </tr>
+      <tr *ngFor="let afastamento of  afastamentos">
+        <td>{{afastamento.nome_evento}}</td>
+        <td>{{afastamento.data_inicio_afastamento}}</td>
+        <td>{{afastamento.data_final_afastamento}}</td>
+        <td>{{afastamento.situacao}}</td>
+        <td [routerLink]="['../verafastamento',afastamento.id]"> ver mais</td>
+      </tr>
+    </table>
+  </div>
+  

@@ -17,6 +17,9 @@ import { ParecerComponent } from './pages/parecer/parecer.component';
 import { ParentescoComponent } from './pages/parentesco/parentesco.component';
 import { AfastamentoComponent } from './pages/afastamento/afastamento.component';
 import { DocumentoComponent } from './pages/documento/documento.component';
+import { ListafastamentoComponent } from './pages/listafastamento/listafastamento.component';
+import { VerafastamentoComponent } from './pages/verafastamento/verafastamento.component';
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
@@ -41,10 +44,13 @@ const routes: Routes = [
     { path: 'parecer', component: ParecerComponent},
     { path: 'afastamento', component: AfastamentoComponent},
     { path: 'secretario', component: SecretarioComponent},
-    {path:'showhome', component:ShowhomeComponent},
-    { path:'showEvent', component: ShoweventComponent},
-    { path:'myEvents', component: MyeventComponent},
-    { path:'createEvent', component: CreateeventComponent },
+    { path: 'showhome', component:ShowhomeComponent},
+    { path: 'listafastamento',component:ListafastamentoComponent},
+    { path: 'verafastamento',component:VerafastamentoComponent},
+    { path: 'verafastamento/:id',component:VerafastamentoComponent},
+    { path: 'showEvent', component: ShoweventComponent},
+    { path: 'myEvents', component: MyeventComponent},
+    { path: 'createEvent', component: CreateeventComponent },
     { path: 'config', component: ConfigComponent},
     ],
   }
