@@ -1,6 +1,6 @@
 import { getRepository, Repository } from "typeorm";
 import IDocumentoRespository from "./IDocumentoRepository"
-import { Documento } from "../../database/entities/Documento";
+import { Documento } from "../../database/modelos/Documento";
 
 
 export class DocumentoRespository implements IDocumentoRespository{

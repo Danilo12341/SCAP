@@ -1,5 +1,5 @@
 import { getRepository, Repository } from "typeorm";
-import { Mandato} from '../../database/entities/Mandato';
+import { Mandato} from '../../database/modelos/Mandato';
 import { MandatoRespository } from "../../respositories/Mandato/MandatoRepository";
 
 

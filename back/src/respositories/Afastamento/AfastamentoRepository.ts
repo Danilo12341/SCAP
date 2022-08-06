@@ -1,6 +1,6 @@
 import { getRepository, Repository } from "typeorm";
 import IAfastamentoRespository from "./IAfastamentoRepository";
-import { Afastamento } from "../../database/entities/Afastamento";
+import { Afastamento } from "../../database/modelos/Afastamento";
 
 
 export class AfastamentoRespository implements IAfastamentoRespository{

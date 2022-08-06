@@ -1,8 +1,5 @@
-import { getRepository, Repository } from "typeorm";
-import { MandatoRespository } from "../../respositories/Mandato/MandatoRepository";
-import { Mandato} from '../../database/entities/Mandato';
 import { ParentescoRespository } from "../../respositories/Parentesco/ParentescoRepository";
-import { Parentesco } from "../../database/entities/Parentesco";
+import { Parentesco } from "../../database/modelos/Parentesco";
 
 
 export class CreateParentescoService{

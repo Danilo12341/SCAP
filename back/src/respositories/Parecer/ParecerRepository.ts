@@ -1,6 +1,6 @@
 import { getRepository, Repository } from "typeorm";
 import IParecerRespository from "./IParecerRepository";
-import { Parecer } from "../../database/entities/Parecer";
+import { Parecer } from "../../database/modelos/Parecer";
 
 
 export class ParecerRespository implements IParecerRespository{

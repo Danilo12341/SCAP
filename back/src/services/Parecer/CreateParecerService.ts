@@ -1,5 +1,5 @@
 import { ParecerRespository } from "../../respositories/Parecer/ParecerRepository";
-import { Parecer } from "../../database/entities/Parecer";
+import { Parecer } from "../../database/modelos/Parecer";
 
 
 

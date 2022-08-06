@@ -1,7 +1,7 @@
 import { hash } from "bcryptjs";
 import { getRepository } from "typeorm";
-import { Student } from '../../database/entities/Professor';
-import { User } from "../../database/entities/Pessoa";
+import { Student } from '../../database/modelos/Professor';
+import { User } from "../../database/modelos/Pessoa";
 import AppError from '../../shared/errors/AppError';
 
 export class CreatePessoaService {

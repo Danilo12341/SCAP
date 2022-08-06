@@ -1,4 +1,4 @@
-import { Parecer } from "../../database/entities/Parecer";
+import { Parecer } from "../../database/modelos/Parecer";
 import { ParecerRespository } from "../../respositories/Parecer/ParecerRepository";
 
 

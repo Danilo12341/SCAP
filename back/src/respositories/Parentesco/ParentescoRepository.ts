@@ -1,5 +1,5 @@
 import { getRepository, Repository } from "typeorm";
-import {Parentesco} from "../../database/entities/Parentesco";
+import {Parentesco} from "../../database/modelos/Parentesco";
 import IParentescoRespository from "./IParentescoRepository";
 
 

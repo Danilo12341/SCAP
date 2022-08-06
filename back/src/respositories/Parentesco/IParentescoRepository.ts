@@ -1,5 +1,5 @@
 
-import { Parentesco } from "../../database/entities/Parentesco";
+import { Parentesco } from "../../database/modelos/Parentesco";
 
 
 export default interface IParentescoRespository{

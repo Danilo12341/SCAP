@@ -1,4 +1,4 @@
-import { Parentesco } from "../../database/entities/Parentesco";
+import { Parentesco } from "../../database/modelos/Parentesco";
 import { ParentescoRespository } from "../../respositories/Parentesco/ParentescoRepository";
 
 

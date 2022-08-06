@@ -1,9 +1,9 @@
 import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import { getRepository } from "typeorm";
-import { User } from "../../database/entities/Pessoa";
+import { User } from "../../database/modelos/Pessoa";
 import AppError from "../../shared/errors/AppError";
-import { Student } from '../../database/entities/Professor';
+import { Student } from '../../database/modelos/Professor';
 
 interface Props {
     email: string;

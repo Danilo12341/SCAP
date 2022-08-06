@@ -1,5 +1,5 @@
 
-import { Documento } from "../../database/entities/Documento";
+import { Documento } from "../../database/modelos/Documento";
 
 
 export default interface IDocumentoRespository{

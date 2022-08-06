@@ -1,5 +1,5 @@
 import { AfastamentoRespository } from "../../respositories/Afastamento/AfastamentoRepository";
-import {Afastamento} from "../../database/entities/Afastamento"
+import {Afastamento} from "../../database/modelos/Afastamento"
 
 export class UpdateAfastamentoService{
   

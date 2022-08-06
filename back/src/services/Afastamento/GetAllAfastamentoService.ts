@@ -1,5 +1,5 @@
 import { getRepository, Repository } from "typeorm";
-import { Afastamento } from "../../database/entities/Afastamento";
+import { Afastamento } from "../../database/modelos/Afastamento";
 import { AfastamentoRespository } from "../../respositories/Afastamento/AfastamentoRepository";
 
 

@@ -1,4 +1,4 @@
-import { Documento } from "../../database/entities/Documento";
+import { Documento } from "../../database/modelos/Documento";
 import { DocumentoRespository } from "../../respositories/Documento/DocumentoRepository";
 
 export class GetAllDocumentoService{

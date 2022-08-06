@@ -1,15 +1,8 @@
-import { getRepository, Repository } from "typeorm";
 import { MandatoRespository } from "../../respositories/Mandato/MandatoRepository";
-import { Mandato} from '../../database/entities/Mandato';
+import { Mandato} from '../../database/modelos/Mandato';
 
 
 
-type MandatoRequest = {
-    datainicio:Date;
-    datafim:Date;
-    chefe: boolean;
-    professor_id: number;
-}
 export class CreateMandatoService{
    /*
     async execute({datainicio,datafim,chefe,professor_id}:MandatoRequest):Promise<Mandato | Error> {

@@ -1,5 +1,5 @@
 import { getRepository } from "typeorm";
-import { Student } from "../../database/entities/Professor";
+import { Student } from "../../database/modelos/Professor";
 import AppError from '../../shared/errors/AppError';
 
 export class DeletePessoaService {

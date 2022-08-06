@@ -1,5 +1,5 @@
 
-import { Mandato } from "../../database/entities/Mandato";
+import { Mandato } from "../../database/modelos/Mandato";
 
 
 export default interface IMandatoRespository{

@@ -1,6 +1,6 @@
 
-import { Afastamento } from "../../database/entities/Afastamento";
-import { Parecer } from "../../database/entities/Parecer";
+import { Afastamento } from "../../database/modelos/Afastamento";
+import { Parecer } from "../../database/modelos/Parecer";
 
 
 export default interface IParecerRespository{
