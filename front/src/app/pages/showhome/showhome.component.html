@@ -1,13 +1,45 @@
 
 
 <div>
-      <h2>{{this.alguem}}</h2>
+      <h3 class="h3_top">{{this.alguem}}(a): {{name2}}  <div  class="email" >email:{{this.e_mail}}</div>  </h3>
+</div>
+ <div *ngIf="!this.admin" id="students" class="container">
+     <h2>Meus afastamentos</h2>
+     <table>
+       <tr>
+         <th>Nome</th>
+         <th>Data Inicio</th>
+         <th>Data Final</th>
+         <th>Nome</th>
+         <th>Situação</th>
+         <th>editar</th>
+       </tr>
+       <tr *ngFor="let meusAfastamento of meusAfastamentos">
+         <td>{{meusAfastamento.nome_evento}}</td>
+         <td>{{meusAfastamento.data_final_afastamento | date:'medium'}}</td>
+         <td>{{meusAfastamento.data_inicio_afastamento | date:'medium'}}</td>
+         <td>{{meusAfastamento.user.name}}</td>
+         <td>{{this.enumSituacao[meusAfastamento.situacao]}}</td>
+         <td [routerLink]="['../editarasfamento',meusAfastamento.id]"> editar</td>
+       </tr>
+     </table>
 
-      <p>Informações</p>
-      <p>nome: {{name2}}</p>
-      <p>telefone: {{telefone}}</p>
-      <p>email: {{this.e_mail}}</p>
-  
+ </div>
+ <div *ngIf="!this.admin" id="students" class="container">
+    <h2>Meus Parentes</h2>
+
+    <table>
+      <tr>
+        <th>Professor</th>
+        <th>Tipo</th>
+      </tr>
+      <tr *ngFor="let meusParentesco of meusParentescos">
+        <td>{{meusParentesco.user.name}}</td>
+        <td>{{this.tipoParente[meusParentesco.tipo]}}</td>
+
+      </tr>
+    </table>
+
 </div>
 
 <div class="info">

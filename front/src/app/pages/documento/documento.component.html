@@ -3,7 +3,7 @@
     <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="container">
             <mat-card-header>
-                <mat-card-title>Anexo Documento</mat-card-title>
+                <mat-card-title>Criar Documento</mat-card-title>
             </mat-card-header>
 
             <mat-form-field>
@@ -23,6 +23,7 @@
                 <option *ngFor="let afastamento of  afastamentos" [value]="afastamento.id">
                     {{afastamento.nome_evento}} </option>
             </select>
+
             <button mat-flat-button color="primary" type="submit">Cadastrar</button>
         </div>
     </form>

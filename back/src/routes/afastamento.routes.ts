@@ -17,11 +17,12 @@ export class AfastamentoRoute {
 
      this.afastamentoRouter.post('/', this.AfastamentoController.create);
      this.afastamentoRouter.get('/', this.AfastamentoController.GetAll);
+     this.afastamentoRouter.delete('/:id', this.AfastamentoController.deleteAfastamento);
      this.afastamentoRouter.get('/:id',this.AfastamentoController.getById);
      this.afastamentoRouter.get('/one/:id',this.AfastamentoController.onegetById);
      this.afastamentoRouter.put('/:id',this.AfastamentoController.updateAfastamento);
      
-  
+
     return this.afastamentoRouter;
   }
 }

@@ -26,5 +26,17 @@ export class ParentescoRespository implements IParentescoRespository{
         });   
     }
 
+    public async getById(idprofessor: number): Promise<Parentesco[]>{
+   
+        const parentescos = await getRepository(Parentesco)
+        .createQueryBuilder('parentesco')
+        .innerJoinAndSelect('parentesco.user', 'user')
+        .where('Parentesco.id_professor1 = :professor_id', {professor_id:idprofessor} )
+        .getMany();
+
+        return parentescos;
+       
+    }
+
   
 }

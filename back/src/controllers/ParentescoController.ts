@@ -1,5 +1,6 @@
 import { Response,Request } from "express"
 import { CreateParentescoService } from "../services/Parentesco/CreateParentescoService";
+import { GetByIdParentescoService } from "../services/Parentesco/GetAllParentescoByIdService";
 import { GetAllParentescoService } from "../services/Parentesco/GetAllParentescoService";
 
 
@@ -30,24 +31,18 @@ export class ParentescoController{
 
     }
 
-    /*
+    
     async getById(request: Request, response: Response) {
 
             const {id} = request.params;
 
-            const getMandatoByIdService = new GetByIdMandatoService();
-            const mandato = await getMandatoByIdService.execute(+id
+            const getByIdParentescoService = new GetByIdParentescoService()
+            const parentesco = await getByIdParentescoService.execute(+id
             );
-
-            
-            return response.json(mandato);
-             
-            
-            
+            return response.json(parentesco);
+                  
     }
-    */
     
-
 }
 
 

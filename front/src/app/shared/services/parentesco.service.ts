@@ -19,6 +19,10 @@ export class ParentescoService{
     createParentesco(parentesco:any) {
       return this.http.post<any>(`${this.baseUrl}`,parentesco).toPromise();
     }
+    
+    findAllbyId(professorId: number) : Promise<any>{
+      return this.http.get<any>(`${this.baseUrl}/${professorId}`).toPromise();
+    }
 
 
 

@@ -1,5 +1,6 @@
 import { Entity,ManyToOne,JoinColumn, Column, CreateDateColumn, PrimaryGeneratedColumn} from "typeorm";
 import {User} from "./Pessoa";
+import { Student } from "./Professor";
 
 
 @Entity("afastamento") // faz o relacionamento com as tabelas dos banco de dados
@@ -40,6 +41,10 @@ export class Afastamento{
     @ManyToOne(() => User)
     @JoinColumn({ name: "id_professor" })
     user: User;
+
+    @ManyToOne(() => Student)
+    @JoinColumn({ name: "id_professor" })
+    professor: Student;
 
 
 }

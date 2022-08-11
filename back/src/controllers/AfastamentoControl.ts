@@ -1,5 +1,6 @@
 import { Response,Request } from "express"
 import { CreateAfastamentoService } from "../services/Afastamento/CreateAfastamentoService";
+import { DeleteAfastamentoService } from "../services/Afastamento/DeleteAfastamentoService";
 import { GetAllAfastamentoService } from "../services/Afastamento/GetAllAfastamentoService";
 import { GetByIdMandatoService } from "../services/Afastamento/GetByIdAfastamentoService";
 import { UpdateAfastamentoService } from "../services/Afastamento/UpdateAfastamentoService";
@@ -61,11 +62,24 @@ export class AfastamentoController{
     async updateAfastamento(request: Request, response: Response) {
 
         const {id} = request.params;
-        const {situacao} = request.body;
+        const Afastamento = request.body;
 
         const updateAfastamentoService = new UpdateAfastamentoService()
-        const afastamento = await updateAfastamentoService.execute(+id,situacao)
+        const afastamento = await updateAfastamentoService.execute(+id,Afastamento)
         return response.json(afastamento);            
+    }
+
+    async deleteAfastamento(request: Request, response: Response) {    
+        try{
+            const {id} = request.params;
+    
+            const deleteAfastamentoService = new DeleteAfastamentoService()
+            await deleteAfastamentoService.execute(+id)
+            return response.status(200).send();
+
+        }catch (err) {
+            return response.status(err.statusCode || 500).json({ message: err.message, title: err.title });
+        }     
     }
     
     

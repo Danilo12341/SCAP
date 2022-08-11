@@ -19,6 +19,7 @@ import { AfastamentoComponent } from './pages/afastamento/afastamento.component'
 import { DocumentoComponent } from './pages/documento/documento.component';
 import { ListafastamentoComponent } from './pages/listafastamento/listafastamento.component';
 import { VerafastamentoComponent } from './pages/verafastamento/verafastamento.component';
+import { EditarAfastamentoComponent } from './pages/editar-afastamento/editar-afastamento.component';
 
 
 const routes: Routes = [
@@ -43,6 +44,8 @@ const routes: Routes = [
     { path: 'parentesco', component: ParentescoComponent},
     { path: 'parecer', component: ParecerComponent},
     { path: 'afastamento', component: AfastamentoComponent},
+    { path: 'editarasfamento', component: EditarAfastamentoComponent},
+    { path: 'editarasfamento/:id', component: EditarAfastamentoComponent},
     { path: 'secretario', component: SecretarioComponent},
     { path: 'showhome', component:ShowhomeComponent},
     { path: 'listafastamento',component:ListafastamentoComponent},

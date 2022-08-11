@@ -1,21 +1,15 @@
-import { getRepository, Repository } from "typeorm";
-import { Mandato} from '../../database/modelos/Mandato';
+import { Parentesco } from "../../database/modelos/Parentesco";
+import { ParentescoRespository } from "../../respositories/Parentesco/ParentescoRepository";
 
-export class GetByIdMandatoService{
+export class GetByIdParentescoService{
 
 
-    async execute(idprofessor: number): Promise<Mandato[]> {
+    async execute(idprofessor: number): Promise<Parentesco[]> {
 
-        const repo = getRepository(Mandato);
-        var valor : number = idprofessor;
-        console.log(valor + "aquii")
-        const mandatos  =  await getRepository(Mandato)
-        .createQueryBuilder("mandato")
-        .where('Mandato.professor_id = :professor_id ', { professor_id:valor })
-        .getMany();
-
-        console.log(mandatos)
-        return mandatos
+     const parentescoRespository = new ParentescoRespository;
+     const parentesco = await parentescoRespository.getById(idprofessor);
+    
+         return parentesco ;
 
     }
     

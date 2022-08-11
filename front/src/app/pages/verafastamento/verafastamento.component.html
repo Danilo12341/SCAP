@@ -1,14 +1,14 @@
-<div>
+<div class="ver">
    
- <p>Nome Evento: {{afastamentos.nome_evento}}</p>
- <p>data_inicio_afastamento: {{afastamentos.data_inicio_afastamento}}</p>
- <p> data_final_afastamento: {{afastamentos.data_final_afastamento}}</p>
- <p>data_inicio_evento: {{afastamentos.data_inicio_evento}}</p>
- <p>data_fim_evento: {{afastamentos.data_fim_evento}}</p>
- <p>situacao:{{afastamentos.situacao}}</p>
- <p>tipoAfastamento": {{afastamentos.tipoAfastamento}}</p>
- <p>onus: {{afastamentos.onus}}</p>
- <p>motivo:{{afastamentos.motivo}}</p>
- <p>id_professor:{{afastamentos.id_professor}}</p>
+ <p>Nome Evento: <b>{{afastamentos.nome_evento}}</b> </p>
+ <p>Data Inicio Afastamento: <b>{{afastamentos.data_inicio_afastamento | date:'medium'}}</b></p>
+ <p>Data Final  Afastamento:<b>{{afastamentos.data_final_afastamento | date:'medium'}}</b> </p>
+ <p>Data Inicio Evento:<b>{{afastamentos.data_inicio_evento | date:'medium'}}</b> </p>
+ <p>Data Final Evento: <b>{{afastamentos.data_fim_evento | date:'medium'}}</b></p>
+ <p>Situacao:<b>{{enumSituacao[afastamentos.situacao] }}</b></p>
+ <p>Tipo do Afastamento": <b>{{tipoAfastamento[afastamentos.tipoAfastamento] }}</b></p>
+ <p>onus: <b>{{ tipoonus[afastamentos.onus]}}</b></p>
+ <p>Motivo:<b>{{afastamentos.motivo }}</b></p>
+
 
 </div>

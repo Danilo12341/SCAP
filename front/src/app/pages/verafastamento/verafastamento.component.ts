@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AfastamentoService } from 'src/app/shared/services/afastamento.service';
 
+
 @Component({
   selector: 'app-verafastamento',
   templateUrl: './verafastamento.component.html',
@@ -11,6 +12,10 @@ import { AfastamentoService } from 'src/app/shared/services/afastamento.service'
 export class VerafastamentoComponent implements OnInit {
 
   afastamentos:any;
+  enumSituacao =["Iniciado","Liberado","AprovadoDI","AprovadoCT","AprovadoPRPPG","Cancelado","Reprovado","Arquivado"]
+  tipoParente=["Sanguineo","Matrimonial"]
+  tipoAfastamento=["Nacional","Internacional"]
+  tipoonus =["Total","Parcial","Inexistente"]
 
   constructor(private route: ActivatedRoute,private afastamentoService: AfastamentoService) { 
 

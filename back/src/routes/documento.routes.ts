@@ -17,7 +17,7 @@ export class documentoRoute {
 
      this.documentoRouter.post('/', this.DocumentoController.create);
      this.documentoRouter.get('/', this.DocumentoController.GetAll);
-     //this.parecerRouter.get('/:id',this.ParecerController.getById);
+     //this.parecerRouter.get('/:id',this.DocumentoController.getById);
   
     return this.documentoRouter;
   }

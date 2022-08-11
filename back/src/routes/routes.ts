@@ -14,7 +14,7 @@ const routes = Router();
 routes.use("/mandatos",ensureAuthenticated, mandatoRoutes);
 routes.use("/pareceres",ensureAuthenticated, parecerRoute);
 routes.use("/afastamentos",afastamentoRoutes);
-routes.use("/parentescos", ensureAuthenticated,parentescoRoutes);
+routes.use("/parentescos",parentescoRoutes);
 routes.use("/documentos",ensureAuthenticated, documentoRoutes);
 routes.use("/users", pessoaRoute);
 routes.use("/students",professorRoute);

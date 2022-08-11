@@ -40,6 +40,7 @@ import { AfastamentoComponent } from './pages/afastamento/afastamento.component'
 import { DocumentoComponent } from './pages/documento/documento.component';
 import { ListafastamentoComponent } from './pages/listafastamento/listafastamento.component';
 import { VerafastamentoComponent } from './pages/verafastamento/verafastamento.component';
+import { EditarAfastamentoComponent } from './pages/editar-afastamento/editar-afastamento.component';
 
 
 @NgModule({
@@ -68,6 +69,7 @@ import { VerafastamentoComponent } from './pages/verafastamento/verafastamento.c
     DocumentoComponent,
     ListafastamentoComponent,
     VerafastamentoComponent,
+    EditarAfastamentoComponent,
   ],
   imports: [
     BrowserModule,

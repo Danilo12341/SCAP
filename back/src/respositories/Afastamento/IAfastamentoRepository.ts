@@ -9,7 +9,8 @@ export default interface IAfastamentoRespository{
     getAll(): Promise<Afastamento[]>;
     getById(idprofessor: number): Promise<Afastamento[]>;
     getOneById(idafastamento: number): Promise<Afastamento>;
-    updateAfastamento(id: number,situacao: number): Promise<Afastamento | Error>;
+    updateAfastamento(id: number,afast: Afastamento): Promise<Afastamento | Error>;
+    deletefastamento(id: number): Promise<void>;
     
     
    

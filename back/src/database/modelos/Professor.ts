@@ -1,4 +1,5 @@
 import { Entity, Column, OneToOne, JoinColumn, PrimaryGeneratedColumn, OneToMany} from "typeorm";
+import { Afastamento } from "./Afastamento";
 import { User } from './Pessoa';
 
 @Entity("professor")
@@ -16,6 +17,9 @@ export class Student {
     @OneToOne(type => User, student => Student, { cascade: true, eager: true })
     @JoinColumn({ name: "user_id" })
     user: User;
+
+    @OneToMany(type => Afastamento, afastamento => Afastamento)
+    afastamentos: Afastamento[];
 
 
 }

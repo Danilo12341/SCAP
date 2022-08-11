@@ -64,7 +64,6 @@ export class AfastamentoComponent implements OnInit {
       data_final_afastamento: [null, [Validators.required]],
       data_inicio_evento: [null, [Validators.required]],
       data_fim_evento: [null, [Validators.required]],
-      situacao:[null, [Validators.required]],
       tipoAfastamento:[null, [Validators.required]],
       onus:[null, [Validators.required]],
       motivo:[null, [Validators.required]]
@@ -102,7 +101,7 @@ export class AfastamentoComponent implements OnInit {
       data_final_afastamento:form.data_final_afastamento,
       data_inicio_evento:form.data_inicio_evento,
       data_fim_evento:form.data_fim_evento,
-      situacao:form.situacao,
+      situacao:0,
       tipoAfastamento:form.tipoAfastamento,
       onus:form.onus,
       motivo:form.motivo

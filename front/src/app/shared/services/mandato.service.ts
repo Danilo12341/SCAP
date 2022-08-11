@@ -20,7 +20,5 @@ export class MandatoService{
       return this.http.post<any>(`${this.baseUrl}`,mandato).toPromise();
     }
 
-
-
    
 }

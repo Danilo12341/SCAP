@@ -17,7 +17,7 @@ export class Parentesco{
     tipo:number;
 
     @ManyToOne(() => User)
-    @JoinColumn({ name: "id_professor1" })
+    @JoinColumn({ name: "id_professor2" })
     user: User;
 
 }

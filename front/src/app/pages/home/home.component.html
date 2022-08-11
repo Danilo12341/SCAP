@@ -4,7 +4,7 @@
 			<router-outlet> 
             </router-outlet>
 		</div>
-       
+        
         <div class="botao">
             <a    [routerLink]="['/home/showhome']">  <button>Home</button></a>     
             <a  *ngIf="this.admin" [routerLink]="['/home/professor']">  <button>Cadastro Professor</button></a>
@@ -13,7 +13,8 @@
             <a  *ngIf="!this.admin" [routerLink]="['/home/afastamento']">  <button> Criar Afastamento</button></a>
             <a  *ngIf="this.admin" [routerLink]="['/home/parentesco']">  <button> Cadastro Parentesco</button></a>
             <a  *ngIf="!this.admin" [routerLink]="['/home/parecer']">  <button> Deferir Parecer</button></a>
-            <a  *ngIf="!this.admin" [routerLink]="['/home/documento']">  <button> Anexo Documento</button></a>   
+            <a  *ngIf="!this.admin" [routerLink]="['/home/documento']">  <button> Criar Documento</button></a> 
+            <a   [routerLink]="['/home/listafastamento']">  <button> Lista Afastamento</button></a> 
         </div>
 	</mat-sidenav-content>
 </mat-sidenav-container>

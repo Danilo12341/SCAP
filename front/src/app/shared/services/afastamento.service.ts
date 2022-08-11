@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 
+
 @Injectable()
 export class AfastamentoService{
 
@@ -12,7 +13,6 @@ export class AfastamentoService{
     private baseUrl2 = `${environment.URL_UFES_SPORT_BACK}/afastamentos/one`;
     
 
-   
     findAllbyId(professorId: number) : Promise<any>{
       return this.http.get<any>(`${this.baseUrl}/${professorId}`).toPromise();
     }
@@ -25,14 +25,16 @@ export class AfastamentoService{
       return this.http.get<any>(`${this.baseUrl}`).toPromise();
     }
     
-
-
     createAfastamento(afastamento:any) {
       return this.http.post<any>(`${this.baseUrl}`,afastamento).toPromise();
     }
+    updatefastamento(id: number,afastamento:any) {
+      return this.http.put<any>(`${this.baseUrl}/${id}`,afastamento).toPromise();
+    }
 
-
-
+    deleteAfastamento(id: number): Promise<any> {
+      return this.http.delete<any>(`${this.baseUrl}/${id}`).toPromise();
+    }
 
    
 }
