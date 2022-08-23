@@ -1,0 +1,43 @@
+<div class="ver">
+   
+    <p>Nome: <b>{{prof.user.name}}</b> </p>
+    <p>Email: <b>{{prof.user.email}}</b> </p>
+    <p>Telefone: <b>{{prof.telephone}}</b> </p>
+
+ </div>
+
+ <div id="students" class="container">
+    <h2>Afastamentos</h2>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Data Inicio</th>
+        <th>Data Final</th>
+        <th>Nome</th>
+    
+      </tr>
+      <tr *ngFor="let meusAfastamento of meusAfastamentos">
+        <td>{{meusAfastamento.nome_evento}}</td>
+        <td>{{meusAfastamento.data_final_afastamento | date:'medium'}}</td>
+        <td>{{meusAfastamento.data_inicio_afastamento | date:'medium'}}</td>
+        <td>{{meusAfastamento.user.name}}</td>
+    
+      </tr>
+    </table>
+  </div>
+  <div  id="students" class="container">
+    <h2>Parentes</h2>
+
+    <table>
+      <tr>
+        <th>Professor</th>
+        <th>Tipo</th>
+      </tr>
+      <tr *ngFor="let meusParentesco of meusParentescos">
+        <td>{{meusParentesco.user.name}}</td>
+        <td>{{this.tipoParente[meusParentesco.tipo]}}</td>
+
+      </tr>
+    </table>
+
+</div>

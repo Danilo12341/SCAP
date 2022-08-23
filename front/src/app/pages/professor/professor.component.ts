@@ -80,6 +80,7 @@ export class ProfessorComponent implements OnInit {
 
     try {
       await this.authService.register(student);
+      alert("Professor Cadastrado com sucesso");
       this.router.navigate(['home/showhome']);
     } catch (error) {
       console.log(error);

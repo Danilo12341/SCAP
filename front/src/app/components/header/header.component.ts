@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { EventoService } from 'src/app/shared/services/eventos.service';
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  providers:[EventoService]
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
 

@@ -109,6 +109,7 @@ export class AfastamentoComponent implements OnInit {
 
     try {
       await this.afastamentoService.createAfastamento(afastamento);
+      alert("Afastamento solicitado com sucesso");
       this.router.navigate(['home/showhome']);
     } catch (error) {
       console.log(error);

@@ -103,6 +103,7 @@ export class MandatoComponent implements OnInit {
 
     try {
       await this.mandatoService.createMandato(mandato);
+      alert("Mandato Cadastrado com sucesso");
       this.router.navigate(['home/showhome']);
     } catch (error) {
       console.log(error);

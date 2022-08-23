@@ -108,6 +108,7 @@ export class DocumentoComponent implements OnInit {
 
     try {
       await this.documentoService.createDocumento(documento);
+      alert("Documento Cadastrado com sucesso");
       this.router.navigate(['home/showhome']);
     } catch (error) {
       console.log(error);

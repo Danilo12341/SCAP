@@ -1,8 +1,15 @@
 
 
 <div id="divBusca" style="margin-top:10px;">
-  Buscar pelo nome do Professor <input type="text" id="txtBusca" /> <button style="margin-right:10px;">Buscar</button> 
-  Buscar pelo nome do Evento <input type="text" id="txtBusca2" />  <button>Buscar</button>
+      Buscar pelo nome do Professor <input type="text" id="txtBusca"
+      #termodapesquisaprof (keyup)="pesquisaprofessor(termodapesquisaprof.value)"/> 
+      <button style="margin-right:10px;">Buscar</button> 
+
+       Buscar pelo nome do Evento <input type="text" id="txtBusca2"
+       #termodapesquisanome (keyup)="pesquisanome(termodapesquisanome.value)"
+       /> 
+       
+       <button>Buscar</button>
 </div>
 
 <div id="students" class="container">
@@ -16,7 +23,7 @@
         <th> Tipo </th>
         <th> Professor </th>
         <th  *ngIf="this.admin">Excluir</th>
-        <th > ver mais </th>
+        <th  *ngIf="this.admin">Excluir</th>
         <th *ngIf="this.admin"> editar </th>
       </tr>
       <tr *ngFor="let afastamento of  afastamentos">
@@ -27,8 +34,8 @@
         <td>{{tipoAfastamento[afastamento.tipoAfastamento]}}</td>
         <td>{{afastamento.user.name}}</td>
         <td  *ngIf="this.admin" (click)="deleteStudent(afastamento.id)" style="cursor: pointer;"><mat-icon>delete</mat-icon></td>
-        <td class="vermais" [routerLink]="['../verafastamento',afastamento.id]"> ver mais</td>
-        <td *ngIf="this.admin" [routerLink]="['../editarasfamento',afastamento.id]"> editar</td>
+        <td class="vermais" [routerLink]="['../verafastamento',afastamento.id]" style="cursor: pointer;"> ver mais</td>
+        <td *ngIf="this.admin" [routerLink]="['../editarasfamento',afastamento.id]" style="cursor: pointer;"> editar</td>
         
       </tr>
     </table>

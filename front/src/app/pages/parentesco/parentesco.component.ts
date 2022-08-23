@@ -99,6 +99,7 @@ export class ParentescoComponent implements OnInit {
 
     try {
       await this.parentescoService.createParentesco(parentesco);
+      alert("Parentesco Cadastrado com sucesso");
       this.router.navigate(['home/showhome']);
     } catch (error) {
       console.log(error);

@@ -1,0 +1,21 @@
+<div id="students" class="container">
+    <h2>Lista de Afastamentos</h2>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Numero</th>
+        <th >Excluir</th>
+        <th >Info</th>
+    
+
+      </tr>
+      <tr *ngFor="let professor of  professores">
+        <td>{{professor.user.name}}</td>
+        <td>{{professor.user.email}}</td>
+        <td>{{professor.telephone}}</td>
+        <td  (click)="deleteProfessor(professor.id)" style="cursor: pointer;"><mat-icon>delete</mat-icon></td>
+        <td class="vermais" [routerLink]="['../verprofessor',professor.id]" style="cursor: pointer;"> ver mais</td>
+      </tr>
+    </table>
+  </div>

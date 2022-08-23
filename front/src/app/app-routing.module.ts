@@ -2,13 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { SignupComponent } from './pages/signup/signup.component';
-import { EventsComponent } from './pages/events/events.component';
-import { CreateeventComponent } from './pages/createevent/createevent.component';
-import { ShoweventComponent } from './pages/showevent/showevent.component';
-import { MyeventComponent } from './pages/myevent/myevent.component';
-import { ConfigComponent } from './pages/config/config.component';
-import { CategoryComponent } from './pages/category/category.component';
 import { ShowhomeComponent } from './pages/showhome/showhome.component';
 import { SecretarioComponent } from './pages/secretario/secretario.component';
 import { ProfessorComponent } from './pages/professor/professor.component';
@@ -20,24 +13,20 @@ import { DocumentoComponent } from './pages/documento/documento.component';
 import { ListafastamentoComponent } from './pages/listafastamento/listafastamento.component';
 import { VerafastamentoComponent } from './pages/verafastamento/verafastamento.component';
 import { EditarAfastamentoComponent } from './pages/editar-afastamento/editar-afastamento.component';
+import { ListaprofessorComponent } from './pages/listaprofessor/listaprofessor.component';
+import { VerprofessorComponent } from './pages/verprofessor/verprofessor.component';
 
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'category', component: CategoryComponent},
-  { path: 'events', component: EventsComponent,
-  children: [
-    { path:'', component: ShoweventComponent},
-    { path:'showEvent', component: ShoweventComponent},
-    { path:'myEvents', component: MyeventComponent},
-    { path:'createEvent', component: CreateeventComponent },
-    { path: 'config', component: ConfigComponent},
-    ],
-  },
+
   { path: 'home', component: HomeComponent,
   children: [
     { path: 'professor', component: ProfessorComponent},
+    { path: 'listaprofessor', component: ListaprofessorComponent},
+    { path: 'verprofessor', component: VerprofessorComponent},
+    { path: 'verprofessor/:id', component: VerprofessorComponent},
     { path: 'secretario', component: SecretarioComponent},
     { path: 'documento', component: DocumentoComponent},
     { path: 'mandato', component: MandatoComponent},
@@ -51,10 +40,6 @@ const routes: Routes = [
     { path: 'listafastamento',component:ListafastamentoComponent},
     { path: 'verafastamento',component:VerafastamentoComponent},
     { path: 'verafastamento/:id',component:VerafastamentoComponent},
-    { path: 'showEvent', component: ShoweventComponent},
-    { path: 'myEvents', component: MyeventComponent},
-    { path: 'createEvent', component: CreateeventComponent },
-    { path: 'config', component: ConfigComponent},
     ],
   }
 ]

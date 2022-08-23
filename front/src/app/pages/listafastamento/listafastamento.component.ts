@@ -13,6 +13,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class ListafastamentoComponent implements OnInit {
 
   afastamentos = []
+  allafastamentos =[];
   enumSituacao =["Iniciado","Liberado","AprovadoDI","AprovadoCT","AprovadoPRPPG","Cancelado","Reprovado","Arquivado"]
   tipoParente=["Sanguineo","Matrimonial"]
   tipoAfastamento=["Nacional","Internacional"]
@@ -22,14 +23,14 @@ export class ListafastamentoComponent implements OnInit {
   constructor( private afastamentoService: AfastamentoService,
     private cookieService: CookieService) { }
 
-  ngOnInit(): void {
-   
+  ngOnInit(): void {  
     this.listafastamento();
     this.admin = this.stringToBoolean(this.cookieService.get('admin'));
   }
 
   async listafastamento(){
     const afastamentos = await this.afastamentoService.findAll()
+    this.allafastamentos = afastamentos;
     this.afastamentos= afastamentos;
     console.log(this.afastamentos);
   }
@@ -40,7 +41,22 @@ export class ListafastamentoComponent implements OnInit {
     }
     return false;
   }
+  
+  pesquisaprofessor(termo:String):void{
 
+      this.afastamentos = this.allafastamentos.filter(afastamento=>{
+        return afastamento.user.name.toLowerCase().includes(termo)
+      })
+      console.log(termo);
+  }
+
+  pesquisanome(termo:String):void{
+
+    this.afastamentos = this.allafastamentos.filter(afastamento=>{
+      return afastamento.nome_evento.toLowerCase().includes(termo)
+    })
+    console.log(termo);
+}
   
   async deleteStudent(id) {
     try {

@@ -20,16 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
-import { EventsComponent } from './pages/events/events.component';
-import { CreateeventComponent } from './pages/createevent/createevent.component';
-import { ShoweventComponent } from './pages/showevent/showevent.component';
-import { MyeventComponent } from './pages/myevent/myevent.component';
 import { CookieService } from 'ngx-cookie-service';
 import { Interceptor } from './shared/services/interceptor.service';
-import { ConfigComponent } from './pages/config/config.component';
-import { StudentComponent } from './pages/config/student/student.component';
-import { SportComponent } from './pages/config/sport/sport.component';
-import { CategoryComponent } from './pages/category/category.component';
 import { ShowhomeComponent } from './pages/showhome/showhome.component';
 import { SecretarioComponent } from './pages/secretario/secretario.component';
 import { ProfessorComponent } from './pages/professor/professor.component';
@@ -41,6 +33,8 @@ import { DocumentoComponent } from './pages/documento/documento.component';
 import { ListafastamentoComponent } from './pages/listafastamento/listafastamento.component';
 import { VerafastamentoComponent } from './pages/verafastamento/verafastamento.component';
 import { EditarAfastamentoComponent } from './pages/editar-afastamento/editar-afastamento.component';
+import { ListaprofessorComponent } from './pages/listaprofessor/listaprofessor.component';
+import { VerprofessorComponent } from './pages/verprofessor/verprofessor.component';
 
 
 @NgModule({
@@ -51,14 +45,6 @@ import { EditarAfastamentoComponent } from './pages/editar-afastamento/editar-af
     HomeComponent,
     SignupComponent,
     LoginComponent,
-    EventsComponent,
-    CreateeventComponent,
-    ShoweventComponent,
-    MyeventComponent,
-    ConfigComponent,
-    StudentComponent,
-    SportComponent,
-    CategoryComponent,
     ShowhomeComponent,
     SecretarioComponent,
     ProfessorComponent,
@@ -70,6 +56,8 @@ import { EditarAfastamentoComponent } from './pages/editar-afastamento/editar-af
     ListafastamentoComponent,
     VerafastamentoComponent,
     EditarAfastamentoComponent,
+    ListaprofessorComponent,
+    VerprofessorComponent,
   ],
   imports: [
     BrowserModule,

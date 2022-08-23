@@ -13,7 +13,8 @@
             <a  *ngIf="!this.admin" [routerLink]="['/home/afastamento']">  <button> Criar Afastamento</button></a>
             <a  *ngIf="this.admin" [routerLink]="['/home/parentesco']">  <button> Cadastro Parentesco</button></a>
             <a  *ngIf="!this.admin" [routerLink]="['/home/parecer']">  <button> Deferir Parecer</button></a>
-            <a  *ngIf="!this.admin" [routerLink]="['/home/documento']">  <button> Criar Documento</button></a> 
+            <a  *ngIf="!this.admin" [routerLink]="['/home/documento']">  <button> Criar Documento</button></a>
+            <a  *ngIf="this.admin" [routerLink]="['/home/listaprofessor']">  <button>Professores</button></a> 
             <a   [routerLink]="['/home/listafastamento']">  <button> Lista Afastamento</button></a> 
         </div>
 	</mat-sidenav-content>
